@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Redirecting...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nirmal Residency Tracking</title>
+
 <script>
-const params = new URLSearchParams(window.location.search);
-const btn = params.get("btn") || "unknown";
+(function () {
+    const btn = new URLSearchParams(window.location.search).get("btn") || "unknown";
 
-window.location.href =
-"  https://script.google.com/macros/s/AKfycbz0jOn6vJ7ce_IW_44yf8qtxmDTFD_uw0Fd9vszji2cxUNbgymDSZa2mKMcZtAszGtmHA/exec?btn=" +
-encodeURIComponent(btn); </script>
+    const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbxUOHyuPrk6rWwyzEJYis0sOOhhwwpKf9xBej4XiCeWhGReMxdV7c8wMwGjn4SGkji0HA/exec";
 
+    window.location.replace(
+        scriptUrl + "?btn=" + encodeURIComponent(btn)
+    );
+})();
+</script>
 
+<style>
+body{
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    background:#f5f5f5;
+}
+.box{
+    text-align:center;
+}
+</style>
 
 </head>
 <body>
-Redirecting...
+<div class="box">
+    <h2>Redirecting...</h2>
+    <p>Please wait.</p>
+</div>
 </body>
 </html>
